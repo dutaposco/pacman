@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>Neon Pac-Man | Full Screen Immersion</title>
+    <meta name="description"
+        content="Mainkan game Pac-Man klasik dalam mode layar penuh yang imersif dengan tampilan neon ultra premium.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&family=Press+Start+2P&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="game-container">
+        <div id="hud">
+            <div class="hud-item">
+                <span class="label">SCORE</span>
+                <span id="score" class="value">000000</span>
+            </div>
+            <div class="hud-item center">
+                <h1 id="game-title">NEON PAC-MAN</h1>
+            </div>
+            <div class="hud-item right">
+                <span class="label">HIGH SCORE</span>
+                <span id="high-score" class="value">000000</span>
+            </div>
+        </div>
+
+        <div id="level-display">LEVEL: <span id="level">1</span></div>
+
+        <canvas id="gameCanvas"></canvas>
+
+        <div id="overlay" class="overlay active">
+            <div class="overlay-content">
+                <h2 id="overlay-title">READY?</h2>
+                <button id="start-btn" class="btn-primary">START GAME</button>
+                <p class="hint">Gunakan Panah Keyboard untuk Bergerak</p>
+            </div>
+        </div>
+
+        <div id="pause-overlay" class="overlay">
+            <div class="overlay-content">
+                <h2>PAUSED</h2>
+                <button id="resume-btn" class="btn-primary">RESUME</button>
+                <p class="hint">Tekan ESC untuk kembali bermain</p>
+            </div>
+        </div>
+
+        <div id="bottom-hud">
+            <div id="lives" class="lives-container"></div>
+            <div id="controls-hint">Dibuat dengan ❤️ oleh Antigravity</div>
+        </div>
+
+        <!-- Hidden Mobile Controls, visible only via CSS on small screens -->
+        <div class="mobile-controls">
+            <div class="d-pad">
+                <button id="up-btn" class="d-btn up">▲</button>
+                <div class="d-row">
+                    <button id="left-btn" class="d-btn left">◀</button>
+                    <button id="right-btn" class="d-btn right">▶</button>
+                </div>
+                <button id="down-btn" class="d-btn down">▼</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
